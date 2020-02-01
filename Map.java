@@ -1,10 +1,10 @@
 import java.io.IOException;
 public class Map {
-    char[][] mapa = new char[50][100];
+    static char[][] mapa = new char[50][100];
     int id = 0;
-    Jednostki jednostki = new Jednostki();
-    public void jednostki(){
-        for(int i = 0; i < mapa.length; i++){
+    static Jednostki jednostki = new Jednostki();
+    public void stratup() {
+    	for(int i = 0; i < mapa.length; i++){
             for(int j = 0; j < mapa[i].length; j++){
                 mapa[i][j] = 0;
             }
@@ -14,6 +14,8 @@ public class Map {
         }
         mapa[48][19] = 2;
         mapa[48][80] = 2;
+    }
+    public void jednostki(){
         for(int i = 0; i < mapa.length; i++) {
             for (int j = 0; j < mapa[i].length; j++) {
                 if(i == 0 || i == 49 || j == 0 || j == 99){
@@ -49,7 +51,7 @@ public class Map {
     public void przygotowanie(){
 
         System.out.println("Faza przygotowywania");
-        System.out.println("Na mapie masz rozmieszczenie swoich jednostek numerycznie");
+        System.out.println("Na mapie masz rozmieszczenie swoich jednostek (P)(K)");
         System.out.println("Wydaj rozkazy swoim jednostkom");
         wyswietlMape();
     }

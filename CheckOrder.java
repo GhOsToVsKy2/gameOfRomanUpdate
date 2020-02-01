@@ -23,9 +23,9 @@ public class CheckOrder {
         return corrOrd;
     }
     public void position(int id, int x, int y) {
-    	Map mapa = new Map()
-    	Jednostki jednostki = new Jednostki();
-    	mapa.mapa[x][y] = 'P';
-    	mapa.mapa[jednostki.legion.get(id).x][jednostki.legion.get(id).y] = ' ';
+    	Map.mapa[x][y] = Map.mapa[Jednostki.legion.get(id).x][Jednostki.legion.get(id).y];
+    	Map.mapa[Jednostki.legion.get(id).x][Jednostki.legion.get(id).y] = ' ';
+    	Map.jednostki.legion.get(id).x = x;
+    	Map.jednostki.legion.get(id).y = y;
     }
 }

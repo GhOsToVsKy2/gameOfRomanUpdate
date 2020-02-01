@@ -9,7 +9,7 @@ public class Jednostki {
     int strona;
     int x;
     int y;
-    public HashMap<Integer, Jednostki> legion = new HashMap<>();
+    static public HashMap<Integer, Jednostki> legion = new HashMap<>();
     
     public Jednostki(){
 

@@ -1,9 +1,12 @@
 import java.util.Scanner;
 public class Main {
+	
+	
     public static void main(String[] args){
         String breakWhile = "proceed";
         Scanner scan = new Scanner(System.in);
         Map mapa = new Map();
+        mapa.stratup();
         do{
             mapa.przygotowanie();
             System.out.print("Wydaj komende, legacie: ");
