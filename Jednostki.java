@@ -7,6 +7,7 @@ public class Jednostki {
     int morale;
     int wyposazenie;
     int strona;
+    int zasieg;
     int x;
     int y;
     static public HashMap<Integer, Jednostki> legion = new HashMap<>();

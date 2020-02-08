@@ -53,9 +53,6 @@ public class Map {
         System.out.println("Faza przygotowywania");
         System.out.println("Na mapie masz rozmieszczenie swoich jednostek (P)(K)");
         System.out.println("Wydaj rozkazy swoim jednostkom");
-        wyswietlMape();
-    }
-    public void wyswietlMape(){
         jednostki();
     }
     public final static void  clearScreen(){

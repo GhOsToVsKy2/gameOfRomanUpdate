@@ -1,10 +1,11 @@
 public class Konnica extends Jednostki{
     public Konnica(int id, int x, int y, int strona){
-        int sila = 200;
-        int liczebnosc = 300;
-        int wyszkolenie = 1;
-        int morale = 25;
-        int wyposazenie = 5;
+    	sila = 200;
+    	liczebnosc = 300;
+        wyszkolenie = 1;
+        morale = 25;
+        wyposazenie = 5;
+        zasieg = 10;
         this.id = id;
         this.x = x;
         this.y = y;
