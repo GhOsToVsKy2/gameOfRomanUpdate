@@ -52,12 +52,12 @@ public class CheckOrder {
     	}
     	if(order.equals("destudo")) {
     		if(ManagerLegion.destudo == 0) {
-	    		for(int i = 0; i <= Jednostki.legion.size(); i++) {
+	    		for(int i = 0; i < Jednostki.legion.size(); i++) {
 	    			Jednostki.legion.get(i).sila += 200;
 	    		}
     		}
     		if(ManagerLegion.destudo == 1) {
-    			for(int i = 0; i <= Jednostki.legion.size(); i++) {
+    			for(int i = 0; i < Jednostki.legion.size(); i++) {
 	    			Jednostki.legion.get(i).sila -= 200;
     			}
     		}
@@ -65,13 +65,13 @@ public class CheckOrder {
     	}
     	if(order.equals("bronic orla")) {
     		if(ManagerLegion.orzel == 0) {
-	    		for(int i = 0; i <= Jednostki.legion.size(); i++) {
+	    		for(int i = 0; i < Jednostki.legion.size(); i++) {
 	    			Jednostki.legion.get(i).sila += 100;
 	    			Jednostki.legion.get(i).morale += 100;
 	    		}
     		}
     		if(ManagerLegion.orzel == 1) {
-    			for(int i = 0; i <= Jednostki.legion.size(); i++) {
+    			for(int i = 0; i < Jednostki.legion.size(); i++) {
 	    			Jednostki.legion.get(i).sila -= 100;
 	    			Jednostki.legion.get(i).morale -= 100;
 	    		}
@@ -90,7 +90,7 @@ public class CheckOrder {
     	}
 		if(order.equals("bronic dowodce")) {
 			if(ManagerLegion.dowodca == 0) {
-				for(int i = 0; i <= Jednostki.legion.size(); i++) {
+				for(int i = 0; i < Jednostki.legion.size(); i++) {
 	    			Jednostki.legion.get(i).morale -= 50;
 	    			if(Jednostki.legion.get(i).morale < 0) {
 	    				Jednostki.legion.get(i).morale = 0;

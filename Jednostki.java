@@ -11,6 +11,7 @@ public class Jednostki {
     int x;
     int y;
     static public HashMap<Integer, Jednostki> legion = new HashMap<>();
+    static public HashMap<Integer, Jednostki> enemyArmy = new HashMap<>();
     
     public Jednostki(){
 

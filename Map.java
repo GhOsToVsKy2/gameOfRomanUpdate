@@ -2,6 +2,7 @@ import java.io.IOException;
 public class Map {
     static char[][] mapa = new char[50][100];
     int id = 0;
+    int enemyId = 0;
     static Jednostki jednostki = new Jednostki();
     public void stratup() {
     	for(int i = 0; i < mapa.length; i++){
@@ -14,6 +15,9 @@ public class Map {
         }
         mapa[48][19] = 2;
         mapa[48][80] = 2;
+        for(int i = 0; i < 60; i++) {
+        	mapa[3][i+20] = 3;
+        }
     }
     public void jednostki(){
         for(int i = 0; i < mapa.length; i++) {
@@ -39,6 +43,9 @@ public class Map {
                 }
                 else if(mapa[i][j] == 3){
                     mapa[i][j] = 'W';
+                    Enemy enemy = new Enemy(enemyId,i,j,1);
+                    jednostki.enemyArmy.put(enemyId, enemy);
+                    enemyId++;
                 }
                 else if(mapa[i][j] == 0){
                     mapa[i][j] = ' ';
@@ -47,10 +54,12 @@ public class Map {
             }
             System.out.println();
         }
+        for(int i = 0; i < enemyId; i++) {
+        	Enemy.bot(i);
+        }
     }
     public void przygotowanie(){
 
-        System.out.println("Faza przygotowywania");
         System.out.println("Na mapie masz rozmieszczenie swoich jednostek (P)(K)");
         System.out.println("Wydaj rozkazy swoim jednostkom");
         jednostki();
